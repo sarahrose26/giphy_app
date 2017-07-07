@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1>Gifasaurus Rex</h1>
+        <div class="container">
+          <div class="row">
+              
+            <% @gif_url_array.each do |url| %>  
+              
+              <div class="card medium col l4 s4 m4">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="<%= url %>">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">GIF PARTY<i class="material-icons right">more_vert</i></span>
+                  <p><a href="#">Check out this gif!</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                  <p>GIFS!!</p>
+                </div>
+              </div> 
+          
+            <% end %>
+          </div>
+        </div>
+    </body>
+</html>
